@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const storedStyle = localStorage.getItem("selectedStyle");
     if (storedStyle === "dark") {
         styleToggle.checked = true;
-        styleLink.href = "../css/style-escuro.css";
+        styleLink.href = "./css/style-escuro.css";
         toggleImage.src = toggleImage.getAttribute("data-dark-image");
     }
 
@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 styleToggle.addEventListener("change", () => {
     if (styleToggle.checked) {
-        styleLink.href = "../css/style-escuro.css";
+        styleLink.href = "./css/style-escuro.css";
         toggleImage.src = toggleImage.getAttribute("data-dark-image");
         localStorage.setItem("selectedStyle", "dark"); // Armazene a escolha no Local Storage
     } else {
-        styleLink.href = "../css/style.css";
-        toggleImage.src = "../img/modo-escuro.png"; // Imagem do modo claro
+        styleLink.href = "./css/style.css";
+        toggleImage.src = "./img/modo-escuro.png"; // Imagem do modo claro
         localStorage.removeItem("selectedStyle"); // Remova a escolha do Local Storage
     }
 });
