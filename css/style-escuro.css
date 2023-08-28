@@ -9,6 +9,49 @@ body {
     background-color: #262626;
 }
 
+.fixed-spotify {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.fixed-spotify a:hover {
+    border: none;
+}
+
+.fixed-spotify .img-spotify {
+    width: 40px;
+}
+
+.row {
+    max-width: 180px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.row strong {
+    color: #24D561;
+    transition: 0.5s;
+    padding: 5px;
+    display: block;
+}
+
+.row:hover {
+    border-color: #1eb653;
+    background-color: #000000;
+}
+
+.row strong:hover {
+    color: #1eb653;
+}
+
 ul {
     list-style: none;
 }
@@ -20,15 +63,19 @@ a {
 }
 
 a:hover {
-    color: #6495ed;
+    color: #E50000;
     text-decoration: none;
 }
 
 
 #navbar {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 0px;
     border-bottom: 2px solid #3a3a3a;
+    background-color: #24242448;
     color: #e0e0e0;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 
 #navbar-inner {
@@ -36,6 +83,10 @@ a:hover {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+#logo-page {
+    height: 23pt;
 }
 
 #nav-links {
@@ -51,7 +102,7 @@ a:hover {
     gap: 3rem;
     padding: 2rem 1.5rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 #posts-container {
@@ -65,7 +116,8 @@ a:hover {
 .post img {
     width: 100%;
     margin-bottom: 1rem;
-    border-radius: 2px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid #242424;
 }
 
 .title, 
@@ -73,6 +125,10 @@ a:hover {
 .author {
     margin-bottom: 1rem; 
     color: #b4b4b4;  
+}
+
+.description strong {
+    color: #b66767;
 }
 
 .title {
@@ -113,8 +169,8 @@ a:hover {
 
 #search-bar input {
     padding: 0.5rem 1rem;
-    border: 1px solid #6495ed;
-    outline-color: #6495ed;
+    border: 1px solid #960000;
+    outline-color: #960000;
     background-color: transparent;
     color: #eee;
 }
@@ -132,7 +188,7 @@ a:hover {
     border-radius: 0px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #6495ed;
+    background-color: #960000;
     color: #fff;
 }
 
@@ -152,16 +208,21 @@ a:hover {
     border-radius: .3rem;
 }
 
+#tags-container a:hover {
+    background-color: #d3d3d3;
+    box-shadow: 0px 0px 5px #d3d3d3;
+}
+
 /* Rodapé */
 
 #footer {
     border-top: 2px solid #3a3a3a;
-    padding: 3rem ;
+    padding: 2rem ;
     text-align: center;
 }
 
-#footer h2 {
-    color: aliceblue;
+#footer img {
+    width: 100px;
 }
 
 #footer h2,
@@ -176,6 +237,23 @@ a:hover {
     .container {
         flex-wrap: wrap;
     }    
+
+    .row strong {
+        display: none;
+    }
+
+    a b {
+        display: none !important; 
+    }
+
+    #navbar img{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    #img {
+        margin-left: 0px !important;
+    }
 
     #search-bar {
         justify-content: center;

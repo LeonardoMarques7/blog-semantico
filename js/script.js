@@ -1,6 +1,6 @@
 const styleToggle = document.getElementById("style-toggle");
 const styleLink = document.getElementById("style-link");
-const toggleImage = document.querySelector("img");
+const toggleImage = document.getElementById("img");
 
 document.addEventListener("DOMContentLoaded", () => {
     // Verifique se já há uma escolha armazenada no Local Storage
